@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export default function FeaturesChess() {
   return (
-    <section className="py-24 px-6 md:px-16 lg:px-24 bg-black">
+    <section id="about" className="py-24 px-6 md:px-16 lg:px-24 bg-black">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div

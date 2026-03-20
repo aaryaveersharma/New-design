@@ -26,7 +26,7 @@ export default function CTAFooter() {
   }, [videoSrc]);
 
   return (
-    <section className="relative py-24 px-6 md:px-16 lg:px-24 bg-black overflow-hidden flex flex-col items-center justify-center">
+    <section id="contact" className="relative py-24 px-6 md:px-16 lg:px-24 bg-black overflow-hidden flex flex-col items-center justify-center">
       {/* Background HLS Video */}
       <video
         ref={videoRef}

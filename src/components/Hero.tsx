@@ -8,7 +8,7 @@ export default function Hero() {
   const row3 = ['Framework', 'Database', 'Deployment', 'Git'];
 
   return (
-    <section className="relative overflow-visible bg-black">
+    <section id="home" className="relative overflow-visible bg-black">
       {/* Background Video - Only covering top fold content */}
       <div className="absolute top-0 left-0 right-0 h-[750px] z-0 overflow-hidden rounded-b-[4rem]">
         <video
