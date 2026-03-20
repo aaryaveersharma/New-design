@@ -14,12 +14,11 @@ export default function Navbar() {
       <div className="flex items-center justify-between w-full max-w-7xl">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <div
-            className="text-2xl font-bold text-white tracking-tight"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
-          >
-            Sovereign.
-          </div>
+          <img
+            src="/images/logo.png"
+            alt="Sovereign Logo"
+            className="h-10 w-auto object-contain"
+          />
         </div>
 
         {/* Center Navigation Pill */}

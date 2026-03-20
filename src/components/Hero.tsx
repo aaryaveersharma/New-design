@@ -46,13 +46,28 @@ export default function Hero() {
         </motion.div>
 
         {/* Main Heading with BlurText */}
-        <div className="max-w-5xl mx-auto mb-6">
-          <BlurText
-            text="Building websites that convert"
-            className="text-6xl md:text-7xl lg:text-[5.5rem] italic text-white tracking-[-4px]"
+        <div className="max-w-4xl mx-auto mb-6">
+          <h1
+            className="text-6xl md:text-8xl lg:text-[7rem] italic text-white tracking-[-4px] leading-[0.9] text-center"
             style={{ fontFamily: "'Instrument Serif', serif" }}
-            delay={0.2}
-          />
+          >
+            <motion.span
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              animate={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="block"
+            >
+              Building websites
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              animate={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="block"
+            >
+              That convert
+            </motion.span>
+          </h1>
         </div>
 
         {/* Subtext */}
