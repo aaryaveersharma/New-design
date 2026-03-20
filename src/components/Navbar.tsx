@@ -31,25 +31,25 @@ export default function Navbar() {
     <>
       <motion.nav
         style={{ opacity: isOpen ? 1 : opacity, y: isOpen ? 0 : y }}
-        className="fixed top-6 left-0 right-0 z-[60] flex justify-center px-4 pointer-events-none"
+        className="fixed top-8 left-0 right-0 z-[60] flex justify-center px-4 pointer-events-none"
       >
-        <div className="flex items-center justify-between w-full max-w-7xl px-8 py-3 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass">
+        <div className="flex items-center justify-between w-full max-w-7xl px-8 py-2 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollToSection('home')}>
+          <div className="flex-shrink-0 cursor-pointer pl-2" onClick={() => scrollToSection('home')}>
             <img
               src="/images/logo.png"
               alt="Sovereign Logo"
-              className="h-16 md:h-20 w-auto object-contain"
+              className="h-18 md:h-24 w-auto object-contain"
             />
           </div>
 
           {/* Right Action Area */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 pr-1">
             <button
               onClick={toggleMenu}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all text-white"
+              className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-all text-white flex items-center justify-center"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
