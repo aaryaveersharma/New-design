@@ -31,7 +31,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-start pt-24 pb-12 px-4 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-start h-[750px] pt-32 px-4 text-center">
         {/* Main Heading with BlurText */}
         <div className="max-w-4xl mx-auto mb-10">
           <h1
@@ -72,7 +72,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.1 }}
-          className="flex flex-col sm:flex-row gap-4 font-heading mb-12"
+          className="flex flex-col sm:flex-row gap-4 font-heading"
         >
           <a
             href="https://wa.me/919329441312"
@@ -93,13 +93,16 @@ export default function Hero() {
             <ArrowUpRight size={18} />
           </a>
         </motion.div>
+      </div>
 
-        {/* Skills Marquee at Bottom */}
+      {/* Skills Marquee Section - Positioned below the video fold */}
+      <div className="relative z-10 py-24 px-4 text-center bg-black">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.3 }}
-          className="mt-0 pb-4 w-full overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="w-full overflow-hidden"
         >
           <div className="liquid-glass rounded-full px-6 py-2 inline-block mb-10">
             <span className="text-xs text-white/70 font-heading uppercase tracking-widest">What we do</span>
