@@ -2,8 +2,8 @@ import type { Config } from "tailwindcss";
 
 const config = {
   content: [
-    "./client/index.html",
-    "./client/src/**/*.{js,ts,jsx,tsx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -14,9 +14,19 @@ const config = {
       fontSize: {
         "7xl": ["4.5rem", { lineHeight: "1" }],
       },
+      colors: {
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        border: "hsl(var(--border))",
+        // Add other semantic colors if needed from index.css
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
 export default config;

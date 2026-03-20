@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import Hls from 'hls.js';
 
 const stats = [
   { value: '200+', label: 'Sites launched' },
@@ -8,22 +10,39 @@ const stats = [
 ];
 
 export default function Stats() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoSrc = "https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8";
+
+  useEffect(() => {
+    let hls: Hls | null = null;
+    if (videoRef.current) {
+      if (Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(videoSrc);
+        hls.attachMedia(videoRef.current);
+      } else if (videoRef.current.canPlayType('application/vnd.apple.mpegurl')) {
+        videoRef.current.src = videoSrc;
+      }
+    }
+    return () => {
+      if (hls) {
+        hls.destroy();
+      }
+    };
+  }, [videoSrc]);
+
   return (
     <section className="relative py-32 px-6 md:px-16 lg:px-24 bg-black overflow-hidden">
       {/* Background HLS Video - Desaturated */}
       <video
+        ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover z-0"
         style={{ filter: 'saturate(0)' }}
         autoPlay
         loop
         muted
         playsInline
-      >
-        <source
-          src="https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8"
-          type="application/x-mpegURL"
-        />
-      </video>
+      />
 
       {/* Top Gradient Fade */}
       <div

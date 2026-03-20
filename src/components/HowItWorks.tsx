@@ -1,22 +1,41 @@
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import Hls from 'hls.js';
 
 export default function HowItWorks() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoSrc = "https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8";
+
+  useEffect(() => {
+    let hls: Hls | null = null;
+    if (videoRef.current) {
+      if (Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(videoSrc);
+        hls.attachMedia(videoRef.current);
+      } else if (videoRef.current.canPlayType('application/vnd.apple.mpegurl')) {
+        videoRef.current.src = videoSrc;
+      }
+    }
+    return () => {
+      if (hls) {
+        hls.destroy();
+      }
+    };
+  }, [videoSrc]);
+
   return (
     <section className="relative min-h-screen py-32 px-6 md:px-16 lg:px-24 bg-black overflow-hidden">
       {/* Background HLS Video */}
       <video
+        ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover z-0"
         autoPlay
         loop
         muted
         playsInline
-      >
-        <source
-          src="https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8"
-          type="application/x-mpegURL"
-        />
-      </video>
+      />
 
       {/* Top Gradient Fade */}
       <div

@@ -1,6 +1,6 @@
 import { ArrowUpRight, Play } from 'lucide-react';
 import { motion } from 'framer-motion';
-import BlurText from './BlurText';
+import BlurText from '@/components/BlurText';
 
 export default function Hero() {
   return (
