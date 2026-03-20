@@ -9,8 +9,8 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-visible bg-black">
-      {/* Background Video */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      {/* Background Video - Only covering top fold content */}
+      <div className="absolute top-0 left-0 right-0 h-[750px] z-0 overflow-hidden rounded-b-[4rem]">
         <video
           className="w-full h-full object-cover opacity-60"
           autoPlay
@@ -24,13 +24,14 @@ export default function Hero() {
             type="video/mp4"
           />
         </video>
+        {/* Overlay - Light Darkening */}
+        <div className="absolute inset-0 bg-black/20"></div>
+        {/* Bottom Fade for the video itself */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black to-transparent"></div>
       </div>
 
-      {/* Overlay - Light Darkening */}
-      <div className="absolute inset-0 bg-black/20 z-0"></div>
-
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-start pt-16 pb-12 px-4 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-start pt-24 pb-12 px-4 text-center">
         {/* Main Heading with BlurText */}
         <div className="max-w-4xl mx-auto mb-10">
           <h1
