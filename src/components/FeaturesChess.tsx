@@ -43,7 +43,7 @@ export default function FeaturesChess() {
               href="https://wa.me/919329441312"
               target="_blank"
               rel="noopener noreferrer"
-              className="liquid-glass-strong rounded-full px-8 py-4 inline-flex items-center gap-2 text-white font-medium hover:bg-white/10 transition-all"
+              className="liquid-glass-strong rounded-full px-8 py-4 inline-flex items-center gap-2 text-white font-medium hover:bg-white/10 transition-all font-body"
             >
               Work With Us
               <ArrowUpRight size={18} />

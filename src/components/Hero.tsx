@@ -33,18 +33,7 @@ export default function Hero() {
       ></div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center pt-32 px-4 text-center">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="liquid-glass rounded-full px-4 py-2 mb-8 inline-flex items-center gap-2"
-        >
-          <div className="w-2 h-2 rounded-full bg-white"></div>
-          <span className="text-sm text-white/80">Introducing AI-powered web design.</span>
-        </motion.div>
-
+      <div className="relative z-10 h-full flex flex-col items-center justify-center pt-20 px-4 text-center">
         {/* Main Heading with BlurText */}
         <div className="max-w-4xl mx-auto mb-6">
           <h1
@@ -85,7 +74,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.1 }}
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex flex-col sm:flex-row gap-4 font-body"
         >
           <a
             href="https://wa.me/919329441312"
@@ -115,12 +104,16 @@ export default function Hero() {
           className="mt-auto pb-8 pt-16 text-center"
         >
           <div className="liquid-glass rounded-full px-6 py-2 inline-block mb-6">
-            <span className="text-xs text-white/70">Trusted by the teams behind</span>
+            <span className="text-xs text-white/70 font-body uppercase tracking-widest">What we do</span>
           </div>
-          <div className="flex flex-wrap justify-center gap-12">
-            {['Stripe', 'Vercel', 'Linear', 'Notion', 'Figma'].map((partner) => (
-              <div key={partner} className="text-2xl md:text-3xl italic text-white" style={{ fontFamily: "'Instrument Serif', serif" }}>
-                {partner}
+          <div className="grid grid-cols-4 gap-x-12 gap-y-4 max-w-4xl mx-auto px-4">
+            {[
+              'Frontend', 'Backend', 'API', 'Optimization',
+              'Hosting', 'Domain', 'CSS', 'JavaScript',
+              'Framework', 'Database', 'Deployment', 'Git'
+            ].map((skill) => (
+              <div key={skill} className="text-xl md:text-2xl italic text-white text-center" style={{ fontFamily: "'Instrument Serif', serif" }}>
+                {skill}
               </div>
             ))}
           </div>

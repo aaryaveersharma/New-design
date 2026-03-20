@@ -122,7 +122,7 @@ export default function HowItWorks() {
             href="https://wa.me/919329441312"
             target="_blank"
             rel="noopener noreferrer"
-            className="liquid-glass-strong rounded-full px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all"
+            className="liquid-glass-strong rounded-full px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all font-body"
           >
             Start Your Journey
             <ArrowUpRight size={18} />
