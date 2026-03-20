@@ -30,9 +30,6 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="liquid-glass rounded-full px-4 py-2 mb-6 inline-flex items-center gap-2">
-            <span className="text-sm text-white/80">What They Say</span>
-          </div>
           <h2
             className="text-4xl md:text-5xl lg:text-6xl italic text-white"
             style={{ fontFamily: "'Instrument Serif', serif" }}
