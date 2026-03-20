@@ -14,14 +14,17 @@ export default function Navbar() {
       <div className="flex items-center justify-between w-full max-w-7xl">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <div className="w-12 h-12 rounded-full bg-white/10 liquid-glass flex items-center justify-center">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-white/40 to-white/10"></div>
+          <div
+            className="text-2xl font-bold text-white tracking-tight"
+            style={{ fontFamily: "'Instrument Serif', serif" }}
+          >
+            Sovereign.
           </div>
         </div>
 
         {/* Center Navigation Pill */}
         <div className="hidden md:flex items-center gap-1 liquid-glass rounded-full px-8 py-3">
-          {navLinks.map((link) => (
+          {['Home', 'Services', 'About', 'Contact'].map((link) => (
             <button
               key={link}
               className="text-sm font-medium text-foreground/90 hover:text-foreground px-4 py-2 transition-colors"
@@ -32,10 +35,15 @@ export default function Navbar() {
         </div>
 
         {/* Get Started Button */}
-        <button className="liquid-glass-strong rounded-full px-6 py-3 flex items-center gap-2 bg-white text-black font-medium text-sm hover:bg-white/90 transition-all">
-          Get Started
-          <ArrowUpRight size={16} />
-        </button>
+        <a
+          href="https://wa.me/919329441312"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="liquid-glass-strong rounded-full px-5 py-2.5 flex items-center gap-2 bg-white text-black font-medium text-sm hover:bg-white/90 transition-all"
+        >
+          Start a Project
+          <ArrowUpRight size={14} />
+        </a>
       </div>
     </motion.nav>
   );

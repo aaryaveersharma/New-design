@@ -25,12 +25,19 @@ export default function HowItWorks() {
     };
   }, [videoSrc]);
 
+  const steps = [
+    { number: '01', title: 'Discovery', description: 'We dive deep into your business, goals, and target audience to understand what success looks like for you.' },
+    { number: '02', title: 'Strategy', description: 'We craft a tailored roadmap that aligns your digital presence with your business objectives.' },
+    { number: '03', title: 'Design & Build', description: 'Our team brings the vision to life with pixel-perfect design and clean, performant code.' },
+    { number: '04', title: 'Launch & Grow', description: 'We deploy your project and provide ongoing support to ensure continuous improvement.' },
+  ];
+
   return (
-    <section className="relative min-h-screen py-32 px-6 md:px-16 lg:px-24 bg-black overflow-hidden">
+    <section className="relative py-24 px-6 md:px-16 lg:px-24 bg-black overflow-hidden">
       {/* Background HLS Video */}
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
         autoPlay
         loop
         muted
@@ -56,53 +63,71 @@ export default function HowItWorks() {
       ></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center justify-center min-h-[500px]">
-        {/* Badge */}
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="liquid-glass rounded-full px-4 py-2 mb-8 inline-flex items-center gap-2"
+          className="mb-16 text-center"
         >
-          <span className="text-sm text-white/80">How It Works</span>
+          <div className="liquid-glass rounded-full px-4 py-2 mb-6 inline-flex items-center gap-2">
+            <span className="text-sm text-white/80">Our Process</span>
+          </div>
+          <h2
+            className="text-4xl md:text-5xl lg:text-6xl italic text-white"
+            style={{ fontFamily: "'Instrument Serif', serif" }}
+          >
+            How We Work
+          </h2>
         </motion.div>
 
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl lg:text-6xl italic text-white mb-6"
-          style={{ fontFamily: "'Instrument Serif', serif" }}
-        >
-          You dream it. We ship it.
-        </motion.h2>
+        {/* Process Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="liquid-glass rounded-2xl p-8 border border-white/5"
+            >
+              <div className="text-3xl font-bold text-white/20 mb-4" style={{ fontFamily: "'Instrument Serif', serif" }}>
+                {step.number}
+              </div>
+              <h3
+                className="text-xl italic text-white mb-4"
+                style={{ fontFamily: "'Instrument Serif', serif" }}
+              >
+                {step.title}
+              </h3>
+              <p className="text-white/60 font-light text-sm leading-relaxed" style={{ fontFamily: "'Barlow', sans-serif" }}>
+                {step.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
 
-        {/* Subtext */}
-        <motion.p
+        {/* CTA Button */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-white/60 font-light text-lg mb-12 max-w-2xl"
-          style={{ fontFamily: "'Barlow', sans-serif" }}
+          className="mt-16 text-center"
         >
-          Share your vision. Our AI handles the rest—wireframes, design, code, launch. All in days, not quarters.
-        </motion.p>
-
-        {/* Button */}
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="liquid-glass-strong rounded-full px-8 py-4 flex items-center justify-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all"
-        >
-          Get Started
-          <ArrowUpRight size={18} />
-        </motion.button>
+          <a
+            href="https://wa.me/919329441312"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="liquid-glass-strong rounded-full px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all"
+          >
+            Start Your Journey
+            <ArrowUpRight size={18} />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

@@ -32,7 +32,7 @@ export default function Stats() {
   }, [videoSrc]);
 
   return (
-    <section className="relative py-32 px-6 md:px-16 lg:px-24 bg-black overflow-hidden">
+    <section className="relative py-24 px-6 md:px-16 lg:px-24 bg-black overflow-hidden">
       {/* Background HLS Video - Desaturated */}
       <video
         ref={videoRef}

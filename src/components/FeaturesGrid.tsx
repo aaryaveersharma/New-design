@@ -1,26 +1,30 @@
 import { motion } from 'framer-motion';
-import { Zap, Palette, BarChart3, Shield } from 'lucide-react';
+import { Code, Layout, TrendingUp, Sparkles } from 'lucide-react';
 
 const features = [
   {
-    icon: Zap,
-    title: 'Days, Not Months',
-    description: 'Concept to launch at a pace that redefines fast.',
+    icon: Code,
+    title: 'Web Development',
+    description: 'High-performance websites engineered for conversion. From landing pages to complex web applications.',
+    tags: ['React', 'Next.js', 'Custom CMS']
   },
   {
-    icon: Palette,
-    title: 'Obsessively Crafted',
-    description: 'Every detail considered. Every element refined.',
+    icon: Layout,
+    title: 'UI/UX Design',
+    description: 'Strategic design that captures attention and drives action. Every pixel serves a purpose.',
+    tags: ['Figma', 'Prototyping', 'User Research']
   },
   {
-    icon: BarChart3,
-    title: 'Built to Convert',
-    description: 'Layouts informed by data. Decisions backed by performance.',
+    icon: TrendingUp,
+    title: 'SEO & Growth',
+    description: 'Data-driven optimization that puts you in front of your ideal customers organically.',
+    tags: ['Technical SEO', 'Content Strategy', 'Analytics']
   },
   {
-    icon: Shield,
-    title: 'Secure by Default',
-    description: 'Enterprise-grade protection comes standard.',
+    icon: Sparkles,
+    title: 'Brand Identity',
+    description: 'Cohesive visual systems that communicate your value and resonate with your audience.',
+    tags: ['Logo Design', 'Brand Guidelines', 'Visual Identity']
   },
 ];
 
@@ -37,13 +41,13 @@ export default function FeaturesGrid() {
           className="mb-16"
         >
           <div className="liquid-glass rounded-full px-4 py-2 mb-6 inline-flex items-center gap-2">
-            <span className="text-sm text-white/80">Why Us</span>
+            <span className="text-sm text-white/80">What We Do</span>
           </div>
           <h2
             className="text-4xl md:text-5xl lg:text-6xl italic text-white"
             style={{ fontFamily: "'Instrument Serif', serif" }}
           >
-            The difference is everything.
+            Services that drive real results
           </h2>
         </motion.div>
 
@@ -69,9 +73,16 @@ export default function FeaturesGrid() {
                 >
                   {feature.title}
                 </h3>
-                <p className="text-white/60 font-light text-sm" style={{ fontFamily: "'Barlow', sans-serif" }}>
+                <p className="text-white/60 font-light text-sm mb-4" style={{ fontFamily: "'Barlow', sans-serif" }}>
                   {feature.description}
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  {feature.tags.map((tag) => (
+                    <span key={tag} className="text-[10px] uppercase tracking-wider text-white/40 border border-white/10 rounded-full px-2 py-0.5">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             );
           })}

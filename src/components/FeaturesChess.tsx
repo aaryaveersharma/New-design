@@ -14,13 +14,13 @@ export default function FeaturesChess() {
           className="mb-16"
         >
           <div className="liquid-glass rounded-full px-4 py-2 mb-6 inline-flex items-center gap-2">
-            <span className="text-sm text-white/80">Capabilities</span>
+            <span className="text-sm text-white/80">About Us</span>
           </div>
           <h2
             className="text-4xl md:text-5xl lg:text-6xl italic text-white"
             style={{ fontFamily: "'Instrument Serif', serif" }}
           >
-            Pro features. Zero complexity.
+            We're not just developers. We're growth partners.
           </h2>
         </motion.div>
 
@@ -30,51 +30,31 @@ export default function FeaturesChess() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
           <div>
-            <h3
-              className="text-3xl md:text-4xl italic text-white mb-4"
-              style={{ fontFamily: "'Instrument Serif', serif" }}
-            >
-              Designed to convert. Built to perform.
-            </h3>
             <p className="text-white/60 font-light text-lg mb-6" style={{ fontFamily: "'Barlow', sans-serif" }}>
-              Every pixel is intentional. Our AI studies what works across thousands of top sites—then builds yours to outperform them all.
+              Sovereign Sites was founded on a simple belief: every business deserves a digital presence that works as hard as they do. We combine strategic thinking with technical excellence to create websites that don't just look stunning—they deliver measurable results.
             </p>
-            <button className="liquid-glass-strong rounded-full px-6 py-3 flex items-center gap-2 text-white font-medium hover:bg-white/10 transition-all">
-              Learn more
-            </button>
-          </div>
-          <div className="liquid-glass rounded-2xl overflow-hidden h-80 bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center">
-            <div className="text-white/40">Feature Image 1</div>
-          </div>
-        </motion.div>
-
-        {/* Row 2: Image Left, Text Right */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse"
-        >
-          <div className="liquid-glass rounded-2xl overflow-hidden h-80 bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center lg:order-2">
-            <div className="text-white/40">Feature Image 2</div>
-          </div>
-          <div className="lg:order-1">
-            <h3
-              className="text-3xl md:text-4xl italic text-white mb-4"
-              style={{ fontFamily: "'Instrument Serif', serif" }}
+            <p className="text-white/60 font-light text-lg mb-8" style={{ fontFamily: "'Barlow', sans-serif" }}>
+              Our team brings together expertise in design, development, and digital strategy. We've helped startups launch, established brands reinvent themselves, and enterprises scale their digital operations.
+            </p>
+            <a
+              href="https://wa.me/919329441312"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="liquid-glass-strong rounded-full px-8 py-4 inline-flex items-center gap-2 text-white font-medium hover:bg-white/10 transition-all"
             >
-              It gets smarter. Automatically.
-            </h3>
-            <p className="text-white/60 font-light text-lg mb-6" style={{ fontFamily: "'Barlow', sans-serif" }}>
-              Your site evolves on its own. AI monitors every click, scroll, and conversion—then optimizes in real time. No manual updates. Ever.
-            </p>
-            <button className="liquid-glass-strong rounded-full px-6 py-3 flex items-center gap-2 text-white font-medium hover:bg-white/10 transition-all">
-              See how it works
-            </button>
+              Work With Us
+              <ArrowUpRight size={18} />
+            </a>
+          </div>
+          <div className="liquid-glass rounded-2xl overflow-hidden aspect-square md:aspect-video lg:aspect-square bg-gradient-to-br from-white/10 to-white/5">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop"
+              alt="Team collaboration"
+              className="w-full h-full object-cover opacity-80"
+            />
           </div>
         </motion.div>
       </div>

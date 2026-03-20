@@ -26,11 +26,11 @@ export default function CTAFooter() {
   }, [videoSrc]);
 
   return (
-    <section className="relative min-h-screen py-32 px-6 md:px-16 lg:px-24 bg-black overflow-hidden flex flex-col items-center justify-center">
+    <section className="relative py-24 px-6 md:px-16 lg:px-24 bg-black overflow-hidden flex flex-col items-center justify-center">
       {/* Background HLS Video */}
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-50"
         autoPlay
         loop
         muted
@@ -67,24 +67,42 @@ export default function CTAFooter() {
           className="text-5xl md:text-6xl lg:text-7xl italic text-white mb-8"
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
-          Your next website starts here.
+          Let's start your success story
         </h2>
 
         <p
           className="text-white/60 font-light text-xl mb-12 max-w-2xl mx-auto"
           style={{ fontFamily: "'Barlow', sans-serif" }}
         >
-          Join hundreds of brands that have transformed their digital presence. Let's build something extraordinary together.
+          Have a project in mind? We'd love to hear about it. Drop us a line and let's explore how we can help you achieve your goals.
         </p>
 
-        <motion.button
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-2xl mx-auto">
+          <div className="liquid-glass rounded-2xl p-6 text-center">
+            <div className="text-white/40 text-sm mb-2">Email</div>
+            <a href="mailto:contact@sovereignsites.in" className="text-xl text-white hover:text-white/80 transition-colors">
+              contact@sovereignsites.in
+            </a>
+          </div>
+          <div className="liquid-glass rounded-2xl p-6 text-center">
+            <div className="text-white/40 text-sm mb-2">WhatsApp</div>
+            <a href="https://wa.me/919329441312" target="_blank" rel="noopener noreferrer" className="text-xl text-white hover:text-white/80 transition-colors">
+              +91 9329441312
+            </a>
+          </div>
+        </div>
+
+        <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="liquid-glass-strong rounded-full px-10 py-5 flex items-center justify-center gap-2 bg-white text-black font-semibold text-lg hover:bg-white/90 transition-all mx-auto"
+          href="https://wa.me/919329441312"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="liquid-glass-strong rounded-full px-10 py-5 inline-flex items-center justify-center gap-2 bg-white text-black font-semibold text-lg hover:bg-white/90 transition-all mx-auto"
         >
-          Start Your Project
+          Get Started on WhatsApp
           <ArrowUpRight size={20} />
-        </motion.button>
+        </motion.a>
 
         {/* Footer Links */}
         <motion.div
@@ -94,21 +112,18 @@ export default function CTAFooter() {
           viewport={{ once: true }}
           className="mt-16 pt-16 border-t border-white/10 flex flex-wrap justify-center gap-8 text-sm"
         >
-          <a href="#" className="text-white/60 hover:text-white transition-colors">
-            Privacy
-          </a>
-          <a href="#" className="text-white/60 hover:text-white transition-colors">
-            Terms
-          </a>
-          <a href="#" className="text-white/60 hover:text-white transition-colors">
-            Contact
-          </a>
-          <a href="#" className="text-white/60 hover:text-white transition-colors">
-            Twitter
-          </a>
-          <a href="#" className="text-white/60 hover:text-white transition-colors">
-            LinkedIn
-          </a>
+          <div className="text-white/40">© 2026 Sovereign Sites. All rights reserved.</div>
+          <div className="flex gap-8">
+            <a href="#" className="text-white/60 hover:text-white transition-colors">
+              Services
+            </a>
+            <a href="#" className="text-white/60 hover:text-white transition-colors">
+              About
+            </a>
+            <a href="#" className="text-white/60 hover:text-white transition-colors">
+              Contact
+            </a>
+          </div>
         </motion.div>
       </motion.div>
     </section>

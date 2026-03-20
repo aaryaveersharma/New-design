@@ -48,7 +48,7 @@ export default function Hero() {
         {/* Main Heading with BlurText */}
         <div className="max-w-5xl mx-auto mb-6">
           <BlurText
-            text="The Website Your Brand Deserves"
+            text="Building websites that convert"
             className="text-6xl md:text-7xl lg:text-[5.5rem] italic text-white tracking-[-4px]"
             style={{ fontFamily: "'Instrument Serif', serif" }}
             delay={0.2}
@@ -62,7 +62,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="max-w-2xl text-white/60 font-body font-light text-lg mb-12"
         >
-          Stunning design. Blazing performance. Built by AI, refined by experts. This is web design, wildly reimagined.
+          High-performance digital experiences engineered for growth. We transform ambitious businesses into market leaders through strategic design and development.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -72,14 +72,24 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.1 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <button className="liquid-glass-strong rounded-full px-8 py-4 flex items-center justify-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all">
-            Get Started
+          <a
+            href="https://wa.me/919329441312"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="liquid-glass-strong rounded-full px-8 py-4 flex items-center justify-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all"
+          >
+            Start Your Project
             <ArrowUpRight size={18} />
-          </button>
-          <button className="liquid-glass rounded-full px-8 py-4 flex items-center justify-center gap-2 text-white font-medium hover:bg-white/5 transition-all">
-            Watch the Film
-            <Play size={18} />
-          </button>
+          </a>
+          <a
+            href="https://wa.me/919329441312"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="liquid-glass rounded-full px-8 py-4 flex items-center justify-center gap-2 text-white font-medium hover:bg-white/5 transition-all"
+          >
+            View Our Services
+            <ArrowUpRight size={18} />
+          </a>
         </motion.div>
 
         {/* Partners Bar at Bottom */}
