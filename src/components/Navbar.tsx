@@ -50,7 +50,7 @@ export default function Navbar() {
             <img
               src="/images/logo.png"
               alt="Sovereign Logo"
-              className="h-12 md:h-16 w-auto object-contain scale-[2.0] origin-left"
+              className="h-12 md:h-16 w-auto object-contain scale-[3.0] origin-left"
             />
           </div>
 
