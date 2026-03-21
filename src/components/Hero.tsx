@@ -31,11 +31,11 @@ export default function Hero() {
       </div>
 
       {/* Content - Fixed height container to match video area */}
-      <div className="relative z-10 flex flex-col items-center justify-start h-[580px] pt-24 px-4 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-end h-[580px] pb-12 px-4 text-center">
         {/* Main Heading with BlurText */}
-        <div className="max-w-4xl mx-auto mb-10">
+        <div className="max-w-4xl mx-auto mb-6">
           <h1
-            className="text-6xl md:text-8xl lg:text-[7rem] italic text-white tracking-[-4px] leading-[0.9] text-center"
+            className="text-6xl md:text-8xl lg:text-[7.5rem] italic text-white tracking-[-4px] leading-[0.85] text-center"
             style={{ fontFamily: "'Instrument Serif', serif" }}
           >
             <motion.span
@@ -57,12 +57,12 @@ export default function Hero() {
           </h1>
         </div>
 
-        {/* Subtext */}
+        {/* Subtext - Positioned at bottom as requested */}
         <motion.p
           initial={{ opacity: 0, filter: 'blur(10px)' }}
           animate={{ opacity: 1, filter: 'blur(0px)' }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="max-w-2xl text-white/60 font-heading font-light text-lg mb-4"
+          className="max-w-2xl text-white/50 font-heading font-light text-base md:text-lg mb-8"
         >
           High-performance digital experiences engineered for growth. We transform ambitious businesses into market leaders through strategic design and development.
         </motion.p>

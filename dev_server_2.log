@@ -1,0 +1,11 @@
+
+> ai-design-agency@0.0.0 dev
+> vite
+
+Re-optimizing dependencies because lockfile has changed
+
+  VITE v5.4.21  ready in 302 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+7:37:26 AM [vite] hmr update /src/components/Hero.tsx, /src/index.css

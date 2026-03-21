@@ -35,11 +35,11 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between w-[95%] max-w-5xl px-6 md:px-10 py-1 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer flex items-center" onClick={() => scrollToSection('home')}>
+          <div className="flex-shrink-0 cursor-pointer flex items-center py-1" onClick={() => scrollToSection('home')}>
             <img
               src="/images/logo.png"
               alt="Sovereign Logo"
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-14 md:h-20 w-auto object-contain scale-[1.35] origin-left"
             />
           </div>
 
