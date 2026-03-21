@@ -133,13 +133,13 @@ export default function CTAFooter() {
             href="https://wa.me/919329441312"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full max-w-xl rounded-2xl px-8 py-6 flex items-center justify-between bg-white text-black font-bold text-2xl hover:bg-white/90 transition-all shadow-2xl whitespace-nowrap font-heading"
+            className="w-full max-w-lg rounded-2xl px-6 py-5 flex items-center justify-between bg-white text-black font-bold text-xl hover:bg-white/90 transition-all shadow-2xl whitespace-nowrap font-heading"
           >
             <div className="flex items-center gap-4">
               <svg
                 viewBox="0 0 24 24"
-                width="32"
-                height="32"
+                width="28"
+                height="28"
                 fill="currentColor"
                 className="text-black"
               >
@@ -147,7 +147,7 @@ export default function CTAFooter() {
               </svg>
               <span>Get Started on WhatsApp</span>
             </div>
-            <ArrowUpRight size={32} />
+            <ArrowUpRight size={28} />
           </motion.a>
         </motion.div>
 

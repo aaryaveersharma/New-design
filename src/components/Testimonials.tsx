@@ -31,9 +31,9 @@ export default function Testimonials() {
           className="mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl italic text-white font-serif"
+            className="text-4xl md:text-5xl lg:text-6xl text-white font-heading font-bold uppercase tracking-tight"
           >
-            Don't take our word for it.
+            Don't <span className="italic font-normal font-serif lowercase">take our word for it.</span>
           </h2>
         </motion.div>
 

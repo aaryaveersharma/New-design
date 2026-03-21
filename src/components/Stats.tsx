@@ -80,7 +80,7 @@ export default function Stats() {
               viewport={{ once: true }}
             >
               <div
-                className="text-4xl md:text-5xl lg:text-6xl italic text-white mb-2 font-serif"
+                className="text-4xl md:text-5xl lg:text-6xl text-white mb-2 font-heading font-extrabold"
               >
                 {stat.value}
               </div>

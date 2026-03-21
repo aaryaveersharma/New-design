@@ -34,7 +34,7 @@ export default function Hero() {
         {/* Main Heading with BlurText */}
         <div className="max-w-7xl mx-auto mb-6">
           <h1
-            className="text-6xl md:text-8xl lg:text-[8rem] text-white tracking-[-0.05em] leading-[0.9] text-center font-bold font-heading"
+            className="text-6xl md:text-8xl lg:text-[8rem] text-white tracking-[-0.05em] leading-[0.9] text-center font-extrabold font-heading"
           >
             <motion.span
               initial={{ opacity: 0, filter: 'blur(10px)' }}

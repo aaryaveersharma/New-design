@@ -73,9 +73,9 @@ export default function HowItWorks() {
           className="mb-16 text-center"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl italic text-white font-serif"
+            className="text-4xl md:text-5xl lg:text-6xl text-white font-heading font-bold uppercase tracking-tight"
           >
-            How We Work
+            How <span className="italic font-normal font-serif lowercase">We Work</span>
           </h2>
         </motion.div>
 
@@ -90,11 +90,11 @@ export default function HowItWorks() {
               viewport={{ once: true }}
               className="liquid-glass rounded-2xl p-8 border border-white/5"
             >
-              <div className="text-3xl font-bold text-white/20 mb-4 font-serif">
+              <div className="text-3xl font-bold text-white/20 mb-4 font-heading">
                 {step.number}
               </div>
               <h3
-                className="text-xl italic text-white mb-4 font-serif"
+                className="text-xl text-white mb-4 font-heading font-bold uppercase tracking-wider"
               >
                 {step.title}
               </h3>

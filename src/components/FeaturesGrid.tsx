@@ -41,9 +41,9 @@ export default function FeaturesGrid() {
           className="mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl italic text-white font-serif"
+            className="text-4xl md:text-5xl lg:text-6xl text-white font-heading font-bold uppercase tracking-tight"
           >
-            Services that drive real results
+            Services that <span className="italic font-normal font-serif lowercase">drive real results</span>
           </h2>
         </motion.div>
 
@@ -64,7 +64,7 @@ export default function FeaturesGrid() {
                   <Icon size={20} className="text-white" />
                 </div>
                 <h3
-                  className="text-lg italic text-white mb-2 font-serif"
+                  className="text-lg text-white mb-2 font-heading font-bold uppercase tracking-wider"
                 >
                   {feature.title}
                 </h3>
