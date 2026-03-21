@@ -11,7 +11,7 @@
   --border: 0 0% 100% / 0.2;
   --radius: 9999px;
   --font-heading: 'Instrument Serif', serif;
-  --font-body: 'Barlow', sans-serif;
+  --font-body: 'Syne', sans-serif;
   
   /* Semantic color tokens for dark theme */
   --card: 0 0% 5%;
@@ -159,11 +159,11 @@
 
   .body-text {
     @apply font-light text-white/60 text-sm;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Syne', sans-serif;
   }
 
   .button-base {
     @apply rounded-full;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Syne', sans-serif;
   }
 }

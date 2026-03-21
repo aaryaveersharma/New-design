@@ -100,7 +100,7 @@ export default function HowItWorks() {
               >
                 {step.title}
               </h3>
-              <p className="text-white/60 font-light text-sm leading-relaxed" style={{ fontFamily: "'Barlow', sans-serif" }}>
+              <p className="text-white/60 font-light text-sm leading-relaxed" style={{ fontFamily: "'Syne', sans-serif" }}>
                 {step.description}
               </p>
             </motion.div>
@@ -119,8 +119,8 @@ export default function HowItWorks() {
             href="https://wa.me/919329441312"
             target="_blank"
             rel="noopener noreferrer"
-            className="liquid-glass-strong rounded-full px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all italic text-xl"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
+            className="rounded-2xl px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-bold hover:bg-white/90 transition-all text-xl"
+            style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Start Your Journey
             <ArrowUpRight size={18} />

@@ -30,18 +30,18 @@ export default function FeaturesChess() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
           <div>
-            <p className="text-white/60 font-light text-lg mb-6" style={{ fontFamily: "'Barlow', sans-serif" }}>
+            <p className="text-white/60 font-light text-lg mb-6" style={{ fontFamily: "'Syne', sans-serif" }}>
               Sovereign Sites was founded on a simple belief: every business deserves a digital presence that works as hard as they do. We combine strategic thinking with technical excellence to create websites that don't just look stunning—they deliver measurable results.
             </p>
-            <p className="text-white/60 font-light text-lg mb-8" style={{ fontFamily: "'Barlow', sans-serif" }}>
+            <p className="text-white/60 font-light text-lg mb-8" style={{ fontFamily: "'Syne', sans-serif" }}>
               Our team brings together expertise in design, development, and digital strategy. We've helped startups launch, established brands reinvent themselves, and enterprises scale their digital operations.
             </p>
             <a
               href="https://wa.me/919329441312"
               target="_blank"
               rel="noopener noreferrer"
-              className="liquid-glass-strong rounded-full px-8 py-4 inline-flex items-center gap-2 text-white font-medium hover:bg-white/10 transition-all italic text-xl"
-              style={{ fontFamily: "'Instrument Serif', serif" }}
+              className="rounded-2xl px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-bold hover:bg-white/90 transition-all text-xl"
+              style={{ fontFamily: "'Syne', sans-serif" }}
             >
               Work With Us
               <ArrowUpRight size={18} />

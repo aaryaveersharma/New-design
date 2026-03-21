@@ -85,7 +85,7 @@ export default function Stats() {
               >
                 {stat.value}
               </div>
-              <div className="text-white/60 font-light text-sm" style={{ fontFamily: "'Barlow', sans-serif" }}>
+              <div className="text-white/60 font-light text-sm" style={{ fontFamily: "'Syne', sans-serif" }}>
                 {stat.label}
               </div>
             </motion.div>

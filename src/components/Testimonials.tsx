@@ -51,15 +51,15 @@ export default function Testimonials() {
             >
               <p
                 className="text-white/80 font-light text-sm italic mb-6"
-                style={{ fontFamily: "'Barlow', sans-serif" }}
+                style={{ fontFamily: "'Syne', sans-serif" }}
               >
                 "{testimonial.quote}"
               </p>
               <div>
-                <p className="text-white font-medium text-sm" style={{ fontFamily: "'Barlow', sans-serif" }}>
+                <p className="text-white font-medium text-sm" style={{ fontFamily: "'Syne', sans-serif" }}>
                   {testimonial.name}
                 </p>
-                <p className="text-white/50 font-light text-xs" style={{ fontFamily: "'Barlow', sans-serif" }}>
+                <p className="text-white/50 font-light text-xs" style={{ fontFamily: "'Syne', sans-serif" }}>
                   {testimonial.role}
                 </p>
               </div>

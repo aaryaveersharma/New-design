@@ -70,7 +70,7 @@ export default function FeaturesGrid() {
                 >
                   {feature.title}
                 </h3>
-                <p className="text-white/60 font-light text-sm mb-4" style={{ fontFamily: "'Barlow', sans-serif" }}>
+                <p className="text-white/60 font-light text-sm mb-4" style={{ fontFamily: "'Syne', sans-serif" }}>
                   {feature.description}
                 </p>
                 <div className="flex flex-wrap gap-2">

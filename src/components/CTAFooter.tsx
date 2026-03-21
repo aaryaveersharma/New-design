@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Hls from 'hls.js';
@@ -26,7 +26,7 @@ export default function CTAFooter() {
   }, [videoSrc]);
 
   return (
-    <section id="contact" className="relative py-24 px-6 md:px-16 lg:px-24 bg-black overflow-hidden flex flex-col items-center justify-center">
+    <section id="contact" className="relative py-24 px-6 md:px-16 lg:px-24 bg-black overflow-hidden flex flex-col items-start">
       {/* Background HLS Video */}
       <video
         ref={videoRef}
@@ -56,64 +56,95 @@ export default function CTAFooter() {
       ></div>
 
       {/* Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="relative z-10 text-center max-w-5xl mx-auto"
-      >
-        <h2
-          className="text-5xl md:text-6xl lg:text-7xl italic text-white mb-8"
-          style={{ fontFamily: "'Instrument Serif', serif" }}
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-start md:pl-12 lg:pl-24">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-left w-full"
         >
-          Let's start your success story
-        </h2>
+          <div className="text-white font-bold text-sm tracking-[0.2em] mb-6 uppercase">Get In Touch</div>
 
-        <p
-          className="text-white/60 font-light text-xl mb-12 max-w-2xl mx-auto"
-          style={{ fontFamily: "'Barlow', sans-serif" }}
-        >
-          Have a project in mind? We'd love to hear about it. Drop us a line and let's explore how we can help you achieve your goals.
-        </p>
+          <h2
+            className="text-5xl md:text-6xl lg:text-7xl text-white mb-4 flex flex-col"
+            style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700 }}
+          >
+            <span>Let's start your</span>
+            <span className="italic font-normal" style={{ fontFamily: "'Instrument Serif', serif" }}>success story</span>
+          </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-2xl mx-auto">
-          <div className="bg-[#111] rounded-2xl p-6 text-center shadow-lg border border-white/20">
-            <div className="text-white/50 text-xs uppercase tracking-widest mb-2 font-medium" style={{ fontFamily: "'Barlow', sans-serif" }}>Email</div>
-            <a
-              href="mailto:contact@sovereignsites.in"
-              className="text-2xl text-white italic"
-              style={{ fontFamily: "'Instrument Serif', serif" }}
-            >
-              contact@sovereignsites.in
-            </a>
+          <p
+            className="text-white/50 font-medium text-lg md:text-xl mb-12 max-w-xl"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Have a project in mind? We'd love to hear about it. Drop us a line and let's explore how we can help you achieve your goals.
+          </p>
+
+          <div className="flex flex-col gap-10 mb-16">
+            <div className="flex items-center gap-6 group">
+              <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center group-hover:bg-white/90 transition-colors duration-300">
+                <Mail size={24} className="text-black" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-white/40 text-sm font-medium uppercase tracking-wider mb-1">Email</span>
+                <a
+                  href="mailto:contact@sovereignsites.in"
+                  className="text-xl md:text-2xl text-white font-bold"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  contact@sovereignsites.in
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-6 group">
+              <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center group-hover:bg-white/90 transition-colors duration-300">
+                <Phone size={24} className="text-black" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-white/40 text-sm font-medium uppercase tracking-wider mb-1">WhatsApp</span>
+                <a
+                  href="https://wa.me/919329441312"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl md:text-2xl text-white font-bold"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  +91 9329441312
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-6 group">
+              <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center group-hover:bg-white/90 transition-colors duration-300">
+                <MapPin size={24} className="text-black" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-white/40 text-sm font-medium uppercase tracking-wider mb-1">Location</span>
+                <span
+                  className="text-xl md:text-2xl text-white font-bold"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  Raipur, Chhattisgarh, IN
+                </span>
+              </div>
+            </div>
           </div>
-          <div className="bg-[#111] rounded-2xl p-6 text-center shadow-lg border border-white/20">
-            <div className="text-white/50 text-xs uppercase tracking-widest mb-2 font-medium" style={{ fontFamily: "'Barlow', sans-serif" }}>WhatsApp</div>
-            <a
-              href="https://wa.me/919329441312"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl text-white italic"
-              style={{ fontFamily: "'Instrument Serif', serif" }}
-            >
-              +91 9329441312
-            </a>
-          </div>
-        </div>
 
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          href="https://wa.me/919329441312"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-xl px-10 py-5 inline-flex items-center justify-center gap-2 bg-white text-black font-semibold text-2xl hover:bg-white/90 transition-all mx-auto shadow-xl italic"
-          style={{ fontFamily: "'Instrument Serif', serif" }}
-        >
-          Get Started on WhatsApp
-          <ArrowUpRight size={20} />
-        </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            href="https://wa.me/919329441312"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-2xl px-12 py-5 inline-flex items-center justify-center gap-3 bg-white text-black font-bold text-xl hover:bg-white/90 transition-all shadow-xl"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            <Phone size={22} />
+            Get Started on WhatsApp
+          </motion.a>
+        </motion.div>
 
         {/* Footer Links */}
         <motion.div
@@ -136,7 +167,7 @@ export default function CTAFooter() {
             </a>
           </div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }
