@@ -33,7 +33,7 @@ export default function Testimonials() {
           <h2
             className="text-4xl md:text-5xl lg:text-6xl text-white font-heading font-bold uppercase tracking-tight"
           >
-            Don't <span className="italic font-normal font-serif lowercase">take our word for it.</span>
+            Don't take our word for it.
           </h2>
         </motion.div>
 

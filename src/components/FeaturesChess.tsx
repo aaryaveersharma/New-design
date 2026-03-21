@@ -16,7 +16,7 @@ export default function FeaturesChess() {
           <h2
             className="text-4xl md:text-5xl lg:text-6xl text-white font-heading font-bold uppercase tracking-tight"
           >
-            We're not just developers. <span className="italic font-normal font-serif lowercase">We're growth partners.</span>
+            We're not just developers. We're growth partners.
           </h2>
         </motion.div>
 

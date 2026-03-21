@@ -43,7 +43,7 @@ export default function FeaturesGrid() {
           <h2
             className="text-4xl md:text-5xl lg:text-6xl text-white font-heading font-bold uppercase tracking-tight"
           >
-            Services that <span className="italic font-normal font-serif lowercase">drive real results</span>
+            Services that drive real results
           </h2>
         </motion.div>
 

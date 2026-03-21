@@ -1,0 +1,14 @@
+
+> ai-design-agency@0.0.0 dev
+> vite
+
+
+  VITE v5.4.21  ready in 298 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+1:43:37 PM [vite] hmr update /src/components/ErrorBoundary.tsx, /src/index.css
+1:43:38 PM [vite] hmr update /src/components/Hero.tsx, /src/index.css
+1:43:40 PM [vite] hmr update /src/components/Navbar.tsx, /src/index.css
+1:43:54 PM [vite] hmr update /src/contexts/ThemeContext.tsx, /src/index.css
+1:48:55 PM [vite] hmr update /src/index.css

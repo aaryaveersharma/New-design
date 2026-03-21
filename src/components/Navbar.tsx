@@ -1,5 +1,5 @@
 import { ArrowUpRight, Menu, X } from 'lucide-react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {

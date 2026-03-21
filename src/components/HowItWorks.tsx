@@ -75,7 +75,7 @@ export default function HowItWorks() {
           <h2
             className="text-4xl md:text-5xl lg:text-6xl text-white font-heading font-bold uppercase tracking-tight"
           >
-            How <span className="italic font-normal font-serif lowercase">We Work</span>
+            How We Work
           </h2>
         </motion.div>
 
