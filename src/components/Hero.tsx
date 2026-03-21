@@ -33,13 +33,13 @@ export default function Hero() {
         {/* Main Heading with BlurText */}
         <div className="max-w-7xl mx-auto mb-6">
           <h1
-            className="text-4xl md:text-6xl lg:text-7xl text-white tracking-[-0.05em] leading-[1.1] text-center"
+            className="text-6xl md:text-8xl lg:text-9xl text-white tracking-[-0.05em] leading-[1.1] text-center"
           >
             <motion.span
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               animate={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="block font-serif italic"
+              className="block font-heading font-bold"
             >
               Building websites
             </motion.span>
@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               animate={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="block font-heading font-bold"
+              className="block font-serif italic"
             >
               That convert
             </motion.span>

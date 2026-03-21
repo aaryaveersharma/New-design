@@ -10,10 +10,14 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   // Smart scroll logic: Hide on scroll down, show on scroll up
+  // Always show if at the top (Hero section)
   useEffect(() => {
     return scrollY.on('change', (latest) => {
       const previous = scrollY.getPrevious() ?? 0;
-      if (latest > previous && latest > 150) {
+
+      if (latest < 50) {
+        setHidden(false);
+      } else if (latest > previous && latest > 150) {
         setHidden(true);
       } else {
         setHidden(false);
@@ -44,13 +48,13 @@ export default function Navbar() {
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className="fixed top-6 left-0 right-0 z-[60] flex justify-center px-4 pointer-events-none"
       >
-        <div className="flex items-center justify-between w-[95%] max-w-5xl px-6 md:px-10 py-0.5 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass">
+        <div className="flex items-center justify-between w-[95%] max-w-5xl px-6 md:px-10 py-0.5 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass overflow-visible">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer flex items-center py-0.5 -translate-x-4" onClick={() => scrollToSection('home')}>
+          <div className="flex-shrink-0 cursor-pointer flex items-center py-0.5" onClick={() => scrollToSection('home')}>
             <img
               src="/images/logo.png"
               alt="Sovereign Logo"
-              className="h-10 md:h-12 w-auto object-contain scale-[3.0] origin-left"
+              className="h-8 md:h-10 w-auto object-contain"
             />
           </div>
 
