@@ -33,13 +33,13 @@ export default function Navbar() {
         style={{ opacity: isOpen ? 1 : opacity, y: isOpen ? 0 : y }}
         className="fixed top-6 left-0 right-0 z-[60] flex justify-center px-4 pointer-events-none"
       >
-        <div className="flex items-center justify-between w-[95%] max-w-5xl px-6 md:px-10 py-1.5 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass">
+        <div className="flex items-center justify-between w-[95%] max-w-5xl px-6 md:px-10 py-1 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer flex items-center py-1" onClick={() => scrollToSection('home')}>
+          <div className="flex-shrink-0 cursor-pointer flex items-center" onClick={() => scrollToSection('home')}>
             <img
               src="/images/logo.png"
               alt="Sovereign Logo"
-              className="h-12 md:h-16 w-auto object-contain"
+              className="h-10 md:h-12 w-auto object-contain"
             />
           </div>
 
@@ -47,7 +47,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <button
               onClick={toggleMenu}
-              className="transition-all text-white flex items-center justify-center hover:scale-110 p-1"
+              className="transition-all text-white flex items-center justify-center hover:scale-110"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
