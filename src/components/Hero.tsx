@@ -39,7 +39,7 @@ export default function Hero() {
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               animate={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="block font-serif italic"
+              className="block font-heading font-bold"
             >
               Building websites
             </motion.span>
@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               animate={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="block font-heading font-bold"
+              className="block font-serif italic"
             >
               That convert
             </motion.span>

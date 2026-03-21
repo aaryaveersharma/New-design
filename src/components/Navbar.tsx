@@ -48,13 +48,13 @@ export default function Navbar() {
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className="fixed top-6 left-0 right-0 z-[60] flex justify-center px-4 pointer-events-none"
       >
-        <div className="flex items-center justify-between w-[95%] max-w-5xl px-6 md:px-10 py-0.5 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass overflow-visible">
+        <div className="flex items-center justify-between w-[95%] max-w-5xl h-12 md:h-14 px-6 md:px-10 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass overflow-visible">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer flex items-center py-0.5" onClick={() => scrollToSection('home')}>
+          <div className="flex-shrink-0 cursor-pointer flex items-center h-full" onClick={() => scrollToSection('home')}>
             <img
               src="/images/logo.png"
               alt="Sovereign Logo"
-              className="h-20 md:h-24 w-auto object-contain"
+              className="h-20 md:h-24 w-auto object-contain translate-y-[-2px]"
             />
           </div>
 
