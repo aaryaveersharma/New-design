@@ -3,9 +3,9 @@ import { useEffect, useRef } from 'react';
 import Hls from 'hls.js';
 
 const stats = [
+  { value: '5+ Years', label: 'Engineering Excellence' },
   { value: '200+', label: 'Sites launched' },
   { value: '98%', label: 'Client satisfaction' },
-  { value: '3.2x', label: 'More conversions' },
   { value: '5 days', label: 'Average delivery' },
 ];
 
