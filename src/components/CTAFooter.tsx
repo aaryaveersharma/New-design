@@ -78,7 +78,7 @@ export default function CTAFooter() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-2xl mx-auto">
-          <div className="bg-white/10 rounded-2xl p-6 text-center shadow-lg border border-white/20">
+          <div className="bg-[#111] rounded-2xl p-6 text-center shadow-lg border border-white/20">
             <div className="text-white/50 text-xs uppercase tracking-widest mb-2 font-medium" style={{ fontFamily: "'Barlow', sans-serif" }}>Email</div>
             <a
               href="mailto:contact@sovereignsites.in"
@@ -88,7 +88,7 @@ export default function CTAFooter() {
               contact@sovereignsites.in
             </a>
           </div>
-          <div className="bg-white/10 rounded-2xl p-6 text-center shadow-lg border border-white/20">
+          <div className="bg-[#111] rounded-2xl p-6 text-center shadow-lg border border-white/20">
             <div className="text-white/50 text-xs uppercase tracking-widest mb-2 font-medium" style={{ fontFamily: "'Barlow', sans-serif" }}>WhatsApp</div>
             <a
               href="https://wa.me/919329441312"
@@ -108,8 +108,8 @@ export default function CTAFooter() {
           href="https://wa.me/919329441312"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-xl px-10 py-5 inline-flex items-center justify-center gap-2 bg-white text-black font-semibold text-lg hover:bg-white/90 transition-all mx-auto shadow-xl"
-          style={{ fontFamily: "'Barlow', sans-serif" }}
+          className="rounded-xl px-10 py-5 inline-flex items-center justify-center gap-2 bg-white text-black font-semibold text-2xl hover:bg-white/90 transition-all mx-auto shadow-xl italic"
+          style={{ fontFamily: "'Instrument Serif', serif" }}
         >
           Get Started on WhatsApp
           <ArrowUpRight size={20} />

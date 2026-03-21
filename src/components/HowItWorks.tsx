@@ -119,7 +119,8 @@ export default function HowItWorks() {
             href="https://wa.me/919329441312"
             target="_blank"
             rel="noopener noreferrer"
-            className="liquid-glass-strong rounded-full px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all font-heading"
+            className="liquid-glass-strong rounded-full px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all italic text-xl"
+            style={{ fontFamily: "'Instrument Serif', serif" }}
           >
             Start Your Journey
             <ArrowUpRight size={18} />

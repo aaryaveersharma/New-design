@@ -17,7 +17,6 @@ export default function Hero() {
           loop
           muted
           playsInline
-          poster="/images/hero_bg.jpeg"
         >
           <source
             src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4"
@@ -31,7 +30,7 @@ export default function Hero() {
       </div>
 
       {/* Content - Fixed height container to match video area */}
-      <div className="relative z-10 flex flex-col items-center justify-end h-[580px] pb-12 px-4 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center h-[580px] pb-4 px-4 text-center">
         {/* Main Heading with BlurText */}
         <div className="max-w-4xl mx-auto mb-6">
           <h1
@@ -80,7 +79,8 @@ export default function Hero() {
             href="https://wa.me/919329441312"
             target="_blank"
             rel="noopener noreferrer"
-            className="liquid-glass-strong rounded-full px-8 py-4 flex items-center justify-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all text-xl"
+            className="liquid-glass-strong rounded-full px-8 py-4 flex items-center justify-center gap-2 bg-white text-black font-medium hover:bg-white/90 transition-all text-xl italic"
+            style={{ fontFamily: "'Instrument Serif', serif" }}
           >
             Start Your Project
             <ArrowUpRight size={18} />
@@ -89,7 +89,8 @@ export default function Hero() {
             href="https://wa.me/919329441312"
             target="_blank"
             rel="noopener noreferrer"
-            className="liquid-glass rounded-full px-8 py-4 flex items-center justify-center gap-2 text-white font-medium hover:bg-white/5 transition-all text-xl"
+            className="liquid-glass rounded-full px-8 py-4 flex items-center justify-center gap-2 text-white font-medium hover:bg-white/5 transition-all text-xl italic"
+            style={{ fontFamily: "'Instrument Serif', serif" }}
           >
             View Our Services
             <ArrowUpRight size={18} />

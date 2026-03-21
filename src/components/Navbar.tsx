@@ -4,15 +4,21 @@ import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
-  const opacity = useTransform(scrollY, [0, 10], [1, 0]);
-  const y = useTransform(scrollY, [0, 10], [0, -150]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Close menu on scroll
+  // Smart scroll logic: Hide on scroll down, show on scroll up
   useEffect(() => {
     return scrollY.on('change', (latest) => {
+      const previous = scrollY.getPrevious() ?? 0;
+      if (latest > previous && latest > 150) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+
       if (latest > 50 && isOpen) {
         setIsOpen(false);
       }
@@ -30,16 +36,21 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        style={{ opacity: isOpen ? 1 : opacity, y: isOpen ? 0 : y }}
+        variants={{
+          visible: { y: 0, opacity: 1 },
+          hidden: { y: -120, opacity: 0 },
+        }}
+        animate={hidden && !isOpen ? "hidden" : "visible"}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
         className="fixed top-6 left-0 right-0 z-[60] flex justify-center px-4 pointer-events-none"
       >
-        <div className="flex items-center justify-between w-[95%] max-w-5xl px-6 md:px-10 py-1 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass">
+        <div className="flex items-center justify-between w-[95%] max-w-5xl px-6 md:px-10 py-0.5 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl pointer-events-auto liquid-glass">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer flex items-center py-1" onClick={() => scrollToSection('home')}>
+          <div className="flex-shrink-0 cursor-pointer flex items-center py-0.5" onClick={() => scrollToSection('home')}>
             <img
               src="/images/logo.png"
               alt="Sovereign Logo"
-              className="h-14 md:h-20 w-auto object-contain scale-[1.35] origin-left"
+              className="h-12 md:h-16 w-auto object-contain scale-[2.0] origin-left"
             />
           </div>
 
@@ -97,7 +108,8 @@ export default function Navbar() {
                 href="https://wa.me/919329441312"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-2xl px-8 py-6 flex items-center justify-between bg-white text-black font-semibold text-2xl hover:bg-white/90 transition-all shadow-xl"
+                className="rounded-2xl px-8 py-6 flex items-center justify-between bg-white text-black font-semibold text-2xl hover:bg-white/90 transition-all shadow-xl italic"
+                style={{ fontFamily: "'Instrument Serif', serif" }}
               >
                 Start a Project
                 <ArrowUpRight size={24} />
