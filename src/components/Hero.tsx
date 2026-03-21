@@ -8,11 +8,11 @@ export default function Hero() {
   const row3 = ['Framework', 'Database', 'Deployment', 'Git'];
 
   return (
-    <section id="home" className="relative overflow-visible bg-black">
-      {/* Background Video - Only covering top fold content */}
-      <div className="absolute top-0 left-0 right-0 h-[750px] z-0 overflow-hidden rounded-b-[4rem]">
+    <section id="home" className="relative overflow-visible bg-black pb-24">
+      {/* Background Video - Only covering navbar to paragraph end */}
+      <div className="absolute top-0 left-0 right-0 h-[580px] z-0 overflow-hidden rounded-b-[4rem]">
         <video
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-50"
           autoPlay
           loop
           muted
@@ -30,8 +30,8 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black to-transparent"></div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-start h-[750px] pt-32 px-4 text-center">
+      {/* Content - Fixed height container to match video area */}
+      <div className="relative z-10 flex flex-col items-center justify-start h-[580px] pt-24 px-4 text-center">
         {/* Main Heading with BlurText */}
         <div className="max-w-4xl mx-auto mb-10">
           <h1
@@ -62,12 +62,14 @@ export default function Hero() {
           initial={{ opacity: 0, filter: 'blur(10px)' }}
           animate={{ opacity: 1, filter: 'blur(0px)' }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="max-w-2xl text-white/60 font-heading font-light text-lg mb-8"
+          className="max-w-2xl text-white/60 font-heading font-light text-lg mb-4"
         >
           High-performance digital experiences engineered for growth. We transform ambitious businesses into market leaders through strategic design and development.
         </motion.p>
+      </div>
 
-        {/* CTA Buttons */}
+      {/* Buttons Area - Outside video container */}
+      <div className="relative z-10 flex flex-col items-center justify-center pt-8 pb-16 px-4 text-center bg-black">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -95,8 +97,8 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Skills Marquee Section - Positioned below the video fold */}
-      <div className="relative z-10 py-24 px-4 text-center bg-black">
+      {/* Skills Marquee Section - Positioned below the buttons */}
+      <div className="relative z-10 py-16 px-4 text-center bg-black">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
