@@ -41,7 +41,7 @@ export default function FeaturesGrid() {
           className="mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl text-white font-heading font-bold uppercase tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl text-white font-serif italic"
           >
             Services that drive real results
           </h2>

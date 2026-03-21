@@ -29,17 +29,17 @@ export default function Hero() {
       </div>
 
       {/* Content - Fixed height container to match video area */}
-      <div className="relative z-10 flex flex-col items-center justify-between h-[580px] pb-8 px-4 text-center pt-32">
+      <div className="relative z-10 flex flex-col items-center justify-between min-h-[580px] pb-8 px-4 text-center pt-48">
         {/* Main Heading with BlurText */}
         <div className="max-w-7xl mx-auto mb-6">
           <h1
-            className="text-4xl md:text-6xl lg:text-7xl text-white tracking-[-0.05em] leading-[0.9] text-center font-extrabold font-heading uppercase"
+            className="text-4xl md:text-6xl lg:text-7xl text-white tracking-[-0.05em] leading-[1.1] text-center"
           >
             <motion.span
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               animate={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="block"
+              className="block font-serif italic"
             >
               Building websites
             </motion.span>
@@ -47,9 +47,9 @@ export default function Hero() {
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               animate={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="block"
+              className="block font-heading font-bold"
             >
-              that convert
+              That convert
             </motion.span>
           </h1>
         </div>

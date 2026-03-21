@@ -73,9 +73,9 @@ export default function HowItWorks() {
           className="mb-16 text-center"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl text-white font-heading font-bold uppercase tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl text-white font-serif italic"
           >
-            How We Work
+            How we work
           </h2>
         </motion.div>
 

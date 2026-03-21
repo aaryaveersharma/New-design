@@ -78,13 +78,18 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="flex flex-col items-center justify-center"
             >
               <div
-                className="text-4xl md:text-5xl lg:text-6xl text-white mb-2 font-heading font-extrabold"
+                className="text-4xl md:text-5xl lg:text-6xl text-white mb-2 font-heading font-extrabold flex items-baseline gap-1"
               >
-                {stat.value}
+                {stat.value.split(' ').map((part, i) => (
+                  <span key={i} className={i > 0 ? "text-2xl md:text-3xl lg:text-4xl" : ""}>
+                    {part}
+                  </span>
+                ))}
               </div>
-              <div className="text-white/60 font-light text-sm font-body">
+              <div className="text-white/60 font-light text-sm font-body uppercase tracking-widest">
                 {stat.label}
               </div>
             </motion.div>

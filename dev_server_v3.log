@@ -12,3 +12,9 @@
 1:43:40 PM [vite] hmr update /src/components/Navbar.tsx, /src/index.css
 1:43:54 PM [vite] hmr update /src/contexts/ThemeContext.tsx, /src/index.css
 1:48:55 PM [vite] hmr update /src/index.css
+2:39:48 PM [vite] hmr update /src/components/Hero.tsx, /src/index.css
+2:41:04 PM [vite] hmr update /src/components/HowItWorks.tsx, /src/index.css
+2:41:04 PM [vite] hmr update /src/components/FeaturesGrid.tsx, /src/index.css
+2:41:05 PM [vite] hmr update /src/components/FeaturesChess.tsx, /src/index.css
+2:41:05 PM [vite] hmr update /src/components/Testimonials.tsx, /src/index.css
+2:43:40 PM [vite] hmr update /src/components/Stats.tsx, /src/index.css
