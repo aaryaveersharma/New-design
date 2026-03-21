@@ -73,8 +73,7 @@ export default function HowItWorks() {
           className="mb-16 text-center"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl italic text-white"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl italic text-white font-serif"
           >
             How We Work
           </h2>
@@ -91,16 +90,15 @@ export default function HowItWorks() {
               viewport={{ once: true }}
               className="liquid-glass rounded-2xl p-8 border border-white/5"
             >
-              <div className="text-3xl font-bold text-white/20 mb-4" style={{ fontFamily: "'Instrument Serif', serif" }}>
+              <div className="text-3xl font-bold text-white/20 mb-4 font-serif">
                 {step.number}
               </div>
               <h3
-                className="text-xl italic text-white mb-4"
-                style={{ fontFamily: "'Instrument Serif', serif" }}
+                className="text-xl italic text-white mb-4 font-serif"
               >
                 {step.title}
               </h3>
-              <p className="text-white/60 font-light text-sm leading-relaxed" style={{ fontFamily: "'Syne', sans-serif" }}>
+              <p className="text-white/60 font-light text-sm leading-relaxed font-body">
                 {step.description}
               </p>
             </motion.div>
@@ -119,8 +117,7 @@ export default function HowItWorks() {
             href="https://wa.me/919329441312"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-2xl px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-bold hover:bg-white/90 transition-all text-xl"
-            style={{ fontFamily: "'Syne', sans-serif" }}
+            className="rounded-2xl px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-bold hover:bg-white/90 transition-all text-xl font-heading"
           >
             Start Your Journey
             <ArrowUpRight size={18} />

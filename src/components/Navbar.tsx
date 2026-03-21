@@ -76,7 +76,7 @@ export default function Navbar() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="fixed top-28 left-4 right-4 md:left-auto md:right-8 z-50 md:w-96 rounded-3xl bg-black/80 backdrop-blur-2xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] p-8 liquid-glass overflow-hidden"
           >
-            <div className="flex flex-col gap-6" style={{ fontFamily: "'Syne', sans-serif" }}>
+            <div className="flex flex-col gap-6 font-heading">
               <button
                 onClick={() => scrollToSection('home')}
                 className="text-2xl font-bold text-white/60 hover:text-white text-left transition-colors"

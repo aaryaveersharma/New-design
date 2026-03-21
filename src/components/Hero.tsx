@@ -30,12 +30,11 @@ export default function Hero() {
       </div>
 
       {/* Content - Fixed height container to match video area */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-[580px] pb-4 px-4 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-between h-[580px] pb-8 px-4 text-center pt-32">
         {/* Main Heading with BlurText */}
         <div className="max-w-7xl mx-auto mb-6">
           <h1
-            className="text-6xl md:text-8xl lg:text-[8rem] text-white tracking-[-0.05em] leading-[0.9] text-center font-bold"
-            style={{ fontFamily: "'Syne', sans-serif" }}
+            className="text-6xl md:text-8xl lg:text-[8rem] text-white tracking-[-0.05em] leading-[0.9] text-center font-bold font-heading"
           >
             <motion.span
               initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -49,8 +48,7 @@ export default function Hero() {
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               animate={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="block italic font-normal"
-              style={{ fontFamily: "'Instrument Serif', serif" }}
+              className="block italic font-normal font-serif"
             >
               that convert
             </motion.span>
@@ -62,8 +60,7 @@ export default function Hero() {
           initial={{ opacity: 0, filter: 'blur(10px)' }}
           animate={{ opacity: 1, filter: 'blur(0px)' }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="max-w-2xl text-white/50 font-medium text-base md:text-lg mb-8"
-          style={{ fontFamily: "'Syne', sans-serif" }}
+          className="max-w-2xl text-white/50 font-medium text-base md:text-lg mb-8 font-body"
         >
           High-performance digital experiences engineered for growth. We transform ambitious businesses into market leaders through strategic design and development.
         </motion.p>
@@ -81,8 +78,7 @@ export default function Hero() {
             href="https://wa.me/919329441312"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-2xl px-8 py-4 flex items-center justify-center gap-2 bg-white text-black font-bold hover:bg-white/90 transition-all text-xl"
-            style={{ fontFamily: "'Syne', sans-serif" }}
+            className="rounded-2xl px-8 py-4 flex items-center justify-center gap-2 bg-white text-black font-bold hover:bg-white/90 transition-all text-xl font-heading"
           >
             Start Your Project
             <ArrowUpRight size={18} />
@@ -91,8 +87,7 @@ export default function Hero() {
             href="https://wa.me/919329441312"
             target="_blank"
             rel="noopener noreferrer"
-            className="liquid-glass rounded-2xl px-8 py-4 flex items-center justify-center gap-2 text-white font-bold hover:bg-white/5 transition-all text-xl"
-            style={{ fontFamily: "'Syne', sans-serif" }}
+            className="liquid-glass rounded-2xl px-8 py-4 flex items-center justify-center gap-2 text-white font-bold hover:bg-white/5 transition-all text-xl font-heading"
           >
             View Our Services
             <ArrowUpRight size={18} />

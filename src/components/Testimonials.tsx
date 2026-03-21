@@ -31,8 +31,7 @@ export default function Testimonials() {
           className="mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl italic text-white"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl italic text-white font-serif"
           >
             Don't take our word for it.
           </h2>
@@ -50,16 +49,15 @@ export default function Testimonials() {
               className="liquid-glass rounded-2xl p-8"
             >
               <p
-                className="text-white/80 font-light text-sm italic mb-6"
-                style={{ fontFamily: "'Syne', sans-serif" }}
+                className="text-white/80 font-light text-sm italic mb-6 font-body"
               >
                 "{testimonial.quote}"
               </p>
-              <div>
-                <p className="text-white font-medium text-sm" style={{ fontFamily: "'Syne', sans-serif" }}>
+              <div className="font-heading">
+                <p className="text-white font-medium text-sm">
                   {testimonial.name}
                 </p>
-                <p className="text-white/50 font-light text-xs" style={{ fontFamily: "'Syne', sans-serif" }}>
+                <p className="text-white/50 font-light text-xs">
                   {testimonial.role}
                 </p>
               </div>

@@ -80,12 +80,11 @@ export default function Stats() {
               viewport={{ once: true }}
             >
               <div
-                className="text-4xl md:text-5xl lg:text-6xl italic text-white mb-2"
-                style={{ fontFamily: "'Instrument Serif', serif" }}
+                className="text-4xl md:text-5xl lg:text-6xl italic text-white mb-2 font-serif"
               >
                 {stat.value}
               </div>
-              <div className="text-white/60 font-light text-sm" style={{ fontFamily: "'Syne', sans-serif" }}>
+              <div className="text-white/60 font-light text-sm font-body">
                 {stat.label}
               </div>
             </motion.div>

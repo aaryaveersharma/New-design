@@ -9,8 +9,9 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["'Instrument Serif'", "serif"],
-        body: ["'Syne'", "sans-serif"],
+        heading: ["'Syne'", "sans-serif"],
+        serif: ["'Instrument Serif'", "serif"],
+        body: ["'Barlow'", "sans-serif"],
       },
       fontSize: {
         "7xl": ["4.5rem", { lineHeight: "1" }],

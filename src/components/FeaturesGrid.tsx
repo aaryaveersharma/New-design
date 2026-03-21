@@ -41,8 +41,7 @@ export default function FeaturesGrid() {
           className="mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl italic text-white"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl italic text-white font-serif"
           >
             Services that drive real results
           </h2>
@@ -65,12 +64,11 @@ export default function FeaturesGrid() {
                   <Icon size={20} className="text-white" />
                 </div>
                 <h3
-                  className="text-lg italic text-white mb-2"
-                  style={{ fontFamily: "'Instrument Serif', serif" }}
+                  className="text-lg italic text-white mb-2 font-serif"
                 >
                   {feature.title}
                 </h3>
-                <p className="text-white/60 font-light text-sm mb-4" style={{ fontFamily: "'Syne', sans-serif" }}>
+                <p className="text-white/60 font-light text-sm mb-4 font-body">
                   {feature.description}
                 </p>
                 <div className="flex flex-wrap gap-2">

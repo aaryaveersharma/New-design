@@ -14,8 +14,7 @@ export default function FeaturesChess() {
           className="mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl italic text-white"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl italic text-white font-serif"
           >
             We're not just developers. We're growth partners.
           </h2>
@@ -30,18 +29,17 @@ export default function FeaturesChess() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
           <div>
-            <p className="text-white/60 font-light text-lg mb-6" style={{ fontFamily: "'Syne', sans-serif" }}>
+            <p className="text-white/60 font-light text-lg mb-6 font-body">
               Sovereign Sites was founded on a simple belief: every business deserves a digital presence that works as hard as they do. We combine strategic thinking with technical excellence to create websites that don't just look stunning—they deliver measurable results.
             </p>
-            <p className="text-white/60 font-light text-lg mb-8" style={{ fontFamily: "'Syne', sans-serif" }}>
+            <p className="text-white/60 font-light text-lg mb-8 font-body">
               Our team brings together expertise in design, development, and digital strategy. We've helped startups launch, established brands reinvent themselves, and enterprises scale their digital operations.
             </p>
             <a
               href="https://wa.me/919329441312"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-2xl px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-bold hover:bg-white/90 transition-all text-xl"
-              style={{ fontFamily: "'Syne', sans-serif" }}
+              className="rounded-2xl px-8 py-4 inline-flex items-center gap-2 bg-white text-black font-bold hover:bg-white/90 transition-all text-xl font-heading"
             >
               Work With Us
               <ArrowUpRight size={18} />
