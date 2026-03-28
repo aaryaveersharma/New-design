@@ -30,12 +30,8 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="liquid-glass rounded-full px-4 py-2 mb-6 inline-flex items-center gap-2">
-            <span className="text-sm text-white/80">What They Say</span>
-          </div>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl italic text-white"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl text-white font-serif italic"
           >
             Don't take our word for it.
           </h2>
@@ -53,16 +49,15 @@ export default function Testimonials() {
               className="liquid-glass rounded-2xl p-8"
             >
               <p
-                className="text-white/80 font-light text-sm italic mb-6"
-                style={{ fontFamily: "'Barlow', sans-serif" }}
+                className="text-white/80 font-light text-sm italic mb-6 font-body"
               >
                 "{testimonial.quote}"
               </p>
-              <div>
-                <p className="text-white font-medium text-sm" style={{ fontFamily: "'Barlow', sans-serif" }}>
+              <div className="font-heading">
+                <p className="text-white font-medium text-sm">
                   {testimonial.name}
                 </p>
-                <p className="text-white/50 font-light text-xs" style={{ fontFamily: "'Barlow', sans-serif" }}>
+                <p className="text-white/50 font-light text-xs">
                   {testimonial.role}
                 </p>
               </div>

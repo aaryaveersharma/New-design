@@ -1,29 +1,48 @@
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import Hls from 'hls.js';
 
 const stats = [
+  { value: '5+ Years', label: 'Engineering Excellence' },
   { value: '200+', label: 'Sites launched' },
   { value: '98%', label: 'Client satisfaction' },
-  { value: '3.2x', label: 'More conversions' },
   { value: '5 days', label: 'Average delivery' },
 ];
 
 export default function Stats() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoSrc = "https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8";
+
+  useEffect(() => {
+    let hls: Hls | null = null;
+    if (videoRef.current) {
+      if (Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(videoSrc);
+        hls.attachMedia(videoRef.current);
+      } else if (videoRef.current.canPlayType('application/vnd.apple.mpegurl')) {
+        videoRef.current.src = videoSrc;
+      }
+    }
+    return () => {
+      if (hls) {
+        hls.destroy();
+      }
+    };
+  }, [videoSrc]);
+
   return (
-    <section className="relative py-32 px-6 md:px-16 lg:px-24 bg-black overflow-hidden">
+    <section className="relative py-24 px-6 md:px-16 lg:px-24 bg-black overflow-hidden">
       {/* Background HLS Video - Desaturated */}
       <video
+        ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover z-0"
         style={{ filter: 'saturate(0)' }}
         autoPlay
         loop
         muted
         playsInline
-      >
-        <source
-          src="https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8"
-          type="application/x-mpegURL"
-        />
-      </video>
+      />
 
       {/* Top Gradient Fade */}
       <div
@@ -59,14 +78,18 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="flex flex-col items-center justify-center"
             >
               <div
-                className="text-4xl md:text-5xl lg:text-6xl italic text-white mb-2"
-                style={{ fontFamily: "'Instrument Serif', serif" }}
+                className="text-4xl md:text-5xl lg:text-6xl text-white mb-2 font-heading font-extrabold flex items-baseline gap-1"
               >
-                {stat.value}
+                {stat.value.split(' ').map((part, i) => (
+                  <span key={i} className={i > 0 ? "text-2xl md:text-3xl lg:text-4xl" : ""}>
+                    {part}
+                  </span>
+                ))}
               </div>
-              <div className="text-white/60 font-light text-sm" style={{ fontFamily: "'Barlow', sans-serif" }}>
+              <div className="text-white/60 font-light text-sm font-body uppercase tracking-widest">
                 {stat.label}
               </div>
             </motion.div>
